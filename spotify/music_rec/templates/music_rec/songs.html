@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Spotify Music Discovery</title>
+        <link rel="stylesheet" href="{% static 'music_rec/songs.css' %}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <h1>Enter a Song to search</h1>
+    <input type="text" id="search"></input>
+    <button class="search_button" onclick="getSongs()">search</button>
+    <form action="{% url 'music_rec:setup' %}" method="post">
+        {% csrf_token %}
+        <div id="songs"></div>
+        {% block js_block %}
+	        <script type="text/javascript" src="{% static 'music_rec/songs.js' %}"></script> 
+        {% endblock %}
+        <button id="submit-button">Add to List</button>
+    </form>
+    <button class="back" onclick="window.location.href='{% url 'music_rec:setup' %}';">Back</button>
+</html>
