@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Spotify Music Discovery</title>
+        <link rel="stylesheet" href="{% static 'music_rec/index.css' %}">
+    </head>
+    <body>
+        <h1>Spotify Music Discovery</h1>
+        <h2>{{ user }}</h2>
+        <button name="login" onclick="window.location.href='{% url 'music_rec:user_login' %}';">Login</button>
+        <br>
+        <button onclick="window.location.href='{% url 'music_rec:signup' %}';">Signup</button>
+        <br>
+        <button name="setup" onclick="window.location.href='{% url 'music_rec:setup' %}';">Get Music Recommendations</button>
+        <br>
+        {% if user != 'No User Logged in' %}
+            <button name="account" onclick="window.location.href='{% url 'music_rec:account' %}';">Account</button>
+            <br>
+            <button name="logout" onclick="window.location.href='{% url 'music_rec:user_logout' %}';">Logout</button>
+            <br>
+        {% endif %}
+        <button name="help" onclick="window.location.href='{% url 'music_rec:help' %}';">Help</button>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Spotify Music Discovery</title>
+        <link rel="stylesheet" href="{% static 'music_rec/signup.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1">
+                <p>Enter your email and a password that is at least 8 characters long</p>
+            </div>
+            <div class="box2">
+                <form action="{% url 'music_rec:signup_success' %}" method="post">
+                    {% csrf_token %}
+                    <label>Email</label>
+                    <input type="text" name="email"></input>
+                    <br>
+                    <label>Password</label>
+                    <input type="password" name ="password"></input>
+                    <br>
+                    <label>Confirm Password</label>
+                    <input type="password" name = "confirm_password"></input>
+                    <br>
+                    <button id="submit-button">Signup</button>    
+                </form>
+            </div>
+            <div class="box3">
+                {% if error %}
+                    <label>{{error}}</label>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+    <button class="back" onclick="window.location.href='{% url 'music_rec:index' %}';">Back</button>
+</html>

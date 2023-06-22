@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Spotify Music Discovery</title>
+        <link rel="stylesheet" href="{% static 'music_rec/account.css' %}">
+    </head>
+    <body>
+        <h1>Spotify Music Discovery</h1>
+        <h2>Username: {{ username }}</h3>
+        <h2>Spotify Account: {{ spotify }}</h3>
+        {% if need_to_connect_spotify == True %}
+            <button name="spotify_login" onclick="window.location.href='{% url 'music_rec:spotify_login' %}';">Connect your Spotify Account</button>
+        {% endif %}
+        <button name="back" onclick="window.location.href='{% url 'music_rec:index' %}';">Back</button>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Spotify Music Discovery</title>
+        <link rel="stylesheet" href="{% static 'music_rec/help.css' %}">
+    </head>
+    <body>
+        <h1>Spotify Music Discovery</h1>
+        <h3>1. Signup</h3>
+        <p>Click the button to signup and create an account. After you create an account you will be prompted to sign into your spotify account to link it with your website account.</p>
+        <img src="{% static 'music_rec/signup.png' %}" alt="Signup Page" style="width:75%;height:10%;">
+        
+        <h3>2. Enter up to 5 songs, 5 artists, and  5 genres</h3>
+        <p>Click Get Music Recommendations to enter up to 5 songs, 5 artists, and 5 genres that you want to base the music recommendations on. You can enter as many or as few as you want and when you are ready click continue.</p>
+        <img src="{% static 'music_rec/setup.png' %}" alt="Setup Page" style="width:75%;height:10%;">
+
+        <p>After clicking on songs or artists you can search for any song or artist you want. Click on the song or artists you want and click the add to list button to add them to the list of items to get recommendations on<p>
+            <img src="{% static 'music_rec/song_search.png' %}" alt="Song Search Page" style="width:75%;height:10%;">
+        <p>After clicking on genres click up to 5 genres to add to the list of items to get recommendations on.</p>
+        <img src="{% static 'music_rec/genres.png' %}" alt="Genres search Page" style="width:75%;height:10%;">
+        
+        <h3>3. Enter parameters or continue without them</H3>
+        <p>Adjust the sliders and click continue or click continue without parameters to continue without having the sliders effect the song recommendations you choose. Enter a number between 1 - 100 songs to be reccomended</p>
+        <img src="{% static 'music_rec/parameters.png' %}" alt="Parameters Page" style="width:75%;height:10%;">
+
+        <h3>4. Name the Playlist and add it to your Spotify account</h3>
+        <p>You can see the the songs and artists Spotify has suggested based on your inputs and can now name the playlist and add it to your Spotify account.</p>
+        <img src="{% static 'music_rec/playlist.png' %}" alt="Playlist Creation Page" style="width:75%;height:10%;">
+
+        <p></p>
+        <button onclick="window.location.href='{% url 'music_rec:index' %}';">Back</button>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Spotify Music Discovery</title>
+        <link rel="stylesheet" href="{% static 'music_rec/playlist.css' %}">
+    </head>
+    <body>
+        <h1>{{ response }}</h1>
+    </body>
+    <button class="continue" onclick="window.location.href='{% url 'music_rec:setup' %}';">Return to Setup</button>
+</html>

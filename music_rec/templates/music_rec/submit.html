@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Recommendations</title>
+        <link rel="stylesheet" href="{% static 'music_rec/submit.css' %}">
+    </head>
+    <body>
+        <h1>Recommendations</h1>
+        <h1>Submit/Modify:</h1>
+        <table class="song-table">
+             <thead>
+                 <tr>
+                     <th>Artist</th>
+                     <th>Song</th>
+                 </tr>
+             </thead>    
+             <tbody>
+                 {% for song in recommendations%}
+                 <tr>
+                     {% for element in song%}
+                     <td>{{element}}</td>
+                     {% endfor %}
+                 </tr>
+                {% endfor %}
+             </tbody>
+        </table>
+        <form action="{% url 'music_rec:playlist' %}" method="post">
+            {% csrf_token %}
+            <label>Playlist Name</label>
+            <input type="text" name="playlist"></input>
+            <button id="submit-button">Create Playlist</button>
+        </form>
+        <button onclick="window.location.href='{% url 'music_rec:index' %}';">Return to Home</button>
+    </body>
+</html>

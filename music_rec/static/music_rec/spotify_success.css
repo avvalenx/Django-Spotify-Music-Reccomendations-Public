@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    background-color: #333;
+    color: #000000;
+}
+
+h1 {
+    font-size: 200%;
+    margin-bottom: 1%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+button {
+    font-size: 150%;
+    text-align: center;
+    display: flex;
+    background-color: rgb(56, 166, 87);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 25%;
+    height: 60px;
+    margin-bottom: 1%;
+    border-radius: 50px;
+}
+button:hover {
+    background-color: rgb(61, 171, 92);
+    color: white;
+  }

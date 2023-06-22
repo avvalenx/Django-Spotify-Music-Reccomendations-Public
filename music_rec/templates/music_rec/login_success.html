@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Success</title>
+        <link rel="stylesheet" href="{% static 'music_rec/login_success.css' %}">
+    </head>
+    <body>
+        <h1>Success</h1>
+        <button id="back" onclick="window.location.href='{% url 'music_rec:index' %}';">Back</button>
+    </body>
+</html>

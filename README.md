@@ -1,6 +1,17 @@
-# Django-Spotify-Music-Reccomendations-Public
-This is a public repository of my Django website which allows users to create Spotify playlists using the Spotify recommendation api. I created this repository so that potential employers can view my work without exposing any security credentials. Please keep in mind that this is not the main working repository so it is not updated frequently and that I am still working on this project. If you would like a complete demonstration with the most up to date code please reach out for an interview.
+# Spotify Music Recommendations
+Spotify Music Recommendations is a Django-based web application that allows users to create an account, connect their Spotify account, and receive music recommendations from the Spotify API. Users can search for songs, artists, and genres, and based on their selections, they will receive a list of 1 - 100 recommended songs that they can add to their playlist.
 
-When you first access the website you must create an account and log into your Spotify account to allow the app permission to your Spotify account via Oauth 2.0 authentication. Once this is done you can go to the setup page and search for songs, artists, and genres. The songs, artists, and genres that you choose are what Spotify uses to create a personalized playlist. From there you are taken to a screen where you can adjust some additional parameters such as popularity, danceability, and more. A confimration screen displays all of the 20 songs that have been choosen based on your inputs. You can finally name the playlist and it will be automatically added to your Spotify account. If you would like to test the website please reach out and I can provide you with some demo credentials.
+## Features
+- User Authentication: Users can create an account and login to their Spotify account to access personalized music recommendations.
+-  Optional Demo account if you do not want to use your own Spotify account or do not have one
+- Music Recommendations: Users can search for songs, artists, and genres, and receive a list of recommended songs based on their selections.
+- Playlist Creation: Users can create their own playlists and add the recommended songs to their playlists.
 
-The code also features an entire test suite which uses traditional unittesting and selenium. This allows for changes to be implemented without having to worry about breaking other parts of the code.
+## Project Status
+Published on AWS and workign on getting SSL certificate for HTTPS.
+
+## Contact
+https://www.linkedin.com/in/anthony-valen/
+
+## Acknowledgements
+Thank you to my friend Jacob ([LocoPluto](https://github.com/LocoPluto)) for helping me with this project and learning Django with me.

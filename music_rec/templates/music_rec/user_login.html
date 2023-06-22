@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Spotify Music Discovery</title>
+        <link rel="stylesheet" href="{% static 'music_rec/user_login.css' %}">
+    </head>
+    <body>
+        <h2>{{ error }}</h2>
+        <form action="{% url 'music_rec:login_handler' %}" method="post">
+            {% csrf_token %}
+            <label>Email</label>
+            <input type="text" name="email"></input>
+            <br>
+            <label>Password</label>
+            <input type="password" name="password"></input>
+            <br>
+            <button id="submit-button">Log in</button>
+        </form>
+    </body>
+    <button class="back" onclick="window.location.href='{% url 'music_rec:index' %}';">Back</button>
+</html>

@@ -1,9 +1,5 @@
 venv/
 secrets.json
 **/__pycache__
-
-#django stuff
-*.log
-local_settings.py
-spotify/db.sqlite3
-spotify/db.sqlite3-journal
+general.log
+db.sqlite3
