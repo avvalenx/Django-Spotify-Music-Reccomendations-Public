@@ -8,7 +8,7 @@ Spotify Music Recommendations is a Django-based web application that allows user
 - Playlist Creation: Users can create their own playlists and add the recommended songs to their playlists.
 
 ## Project Status
-Published on AWS and workign on getting SSL certificate for HTTPS.
+Published on AWS at https://www.spotifymusicrecommendations.com/
 
 ## Contact
 https://www.linkedin.com/in/anthony-valen/
